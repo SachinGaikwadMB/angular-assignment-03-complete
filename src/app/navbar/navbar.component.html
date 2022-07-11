@@ -1,0 +1,327 @@
+<header class="header-container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand animate-brand" href="#"> Gaikwad </a>
+      <div
+        class="collapse navbar-collapse"
+        id="navbarTogglerDemo03"
+        id="left-navbar"
+      >
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              routerLink="jwellery/earrings"
+              >Earings</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              routerLink="jwellery/necklace"
+              >Necklace</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              routerLink="jwellery/rings"
+              >Rings</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              routerLink="jwellery/bracelet"
+              >Bracelets</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div id="right-navbar">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="#1"
+              ><i
+                class="fa fa-gift"
+                style="font-size: 25px; margin-right: 10px"
+              ></i
+              ><small>Coupons</small></a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#2"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight1"
+              aria-controls="offcanvasRight"
+              ><i class="far fa-heart" style="font-size: 25px"></i
+              ><sub
+                class="text-danger"
+                style="margin-right: 10px; font-size: 15px"
+                >{{ totalWishList }}</sub
+              ><small>Wishlist</small></a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#3"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight"
+              aria-controls="offcanvasRight"
+              ><i class="fas fa-shopping-cart" style="font-size: 25px"></i
+              ><sub
+                class="text-danger"
+                style="margin-right: 10px; font-size: 15px"
+                >{{ totalCartItem }}</sub
+              ><small>Cart</small></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- =================== offcanvas element for Add to Cart =============================== -->
+
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  id="offcanvasRight"
+  aria-labelledby="offcanvasRightLabel"
+>
+  <div class="offcanvas-header">
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+    <p>
+      <strong>{{ totalCartItem }}</strong> item(s)
+    </p>
+  </div>
+  <div class="offcanvas-body">
+    <ng-container *ngIf="totalCartItem === 0">
+      <div class="text-center mt-4 cart-heading">
+        <h3><strong>Cart Seems Empty !</strong></h3>
+      </div>
+
+      <div class="text-center mt-4 cart-body">
+        <p>Gaikwad Jwellery by Cartlane | One of kind Silver Jwellery</p>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="totalCartItem !== 0">
+      <div class="container-fluid">
+        <div class="text-center">
+          <h3><strong>Your Cart</strong></h3>
+        </div>
+        <div class="text-center mt-4 cart-body">
+          <p>Gaikwad Jwellery by Cartlane | One of kind Silver Jwellery</p>
+        </div>
+
+        <!-- cart modification  start-->
+
+        <div class="card mt-4">
+          <div class="card-header py-3">
+            <h5 class="mb-0">Cart Details</h5>
+          </div>
+          <div class="card-body">
+            <div
+              class="row"
+              *ngFor="let product of cartProductList; index as idx"
+            >
+              <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                <div
+                  class="bg-image hover-overlay hover-zoom ripple rounded"
+                  data-mdb-ripple-color="light"
+                >
+                  <img src="{{ product.image }}" class="w-100" alt="" />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2)"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                <p>
+                  <strong>{{ product.title }}</strong>
+                </p>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                <p class="text-start text-md-center">
+                  <strong>
+                    <strong>{{
+                      product.price | currency: "INR"
+                    }}</strong></strong
+                  >
+                </p>
+
+                <button
+                  type="button"
+                  class="btn btn-primary btn-sm me-1 mb-2 ms-4"
+                  data-mdb-toggle="tooltip"
+                  title="Remove item"
+                  (click)="removeFromCart(idx)"
+                >
+                  <i class="fas fa-trash"></i>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-danger btn-sm mb-2"
+                  data-mdb-toggle="tooltip"
+                  title="Move to the wish list"
+                  (click)="addToWishList(product, idx)"
+                >
+                  <i class="fas fa-heart"></i>
+                </button>
+              </div>
+              <hr class="my-4" />
+            </div>
+          </div>
+        </div>
+        <!-- cart modification  end-->
+
+        <!-- Checkout button just after the cart list  -->
+        <div class="d-flex justify-content-center btn-checkout mt-4">
+          <button data-bs-dismiss="offcanvas" routerLink="cart/checkout">
+            proceed to checkout
+          </button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<!-- =================== offcanvas element for Add to  Wish list =============================== -->
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  id="offcanvasRight1"
+  aria-labelledby="offcanvasRightLabel"
+>
+  <div class="offcanvas-header">
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+    <p>
+      <strong>{{ totalWishList }}</strong> item(s)
+    </p>
+  </div>
+  <div class="offcanvas-body">
+    <ng-container *ngIf="totalWishList === 0">
+      <div class="text-center mt-4 cart-heading">
+        <h3><strong>Wish List Seems Empty !</strong></h3>
+      </div>
+
+      <div class="text-center mt-4 cart-body">
+        <p>Gaikwad Jwellery by Cartlane | One of kind Silver Jwellery</p>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="totalWishList !== 0">
+      <div class="container-fluid">
+        <div class="text-center">
+          <h3><strong>Wish List </strong></h3>
+        </div>
+        <div class="text-center mt-4 cart-body">
+          <p>Gaikwad Jwellery by Cartlane | One of kind Silver Jwellery</p>
+        </div>
+
+        <!-- Wish list UI modification start here  -->
+        <div class="card mt-4">
+          <div class="card-header py-3">
+            <h5 class="mb-0">Cart Details</h5>
+          </div>
+          <div class="card-body">
+            <div
+              class="row"
+              *ngFor="let product of productWishList; index as idx"
+            >
+              <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                <div
+                  class="bg-image hover-overlay hover-zoom ripple rounded"
+                  data-mdb-ripple-color="light"
+                >
+                  <img src="{{ product.image }}" class="w-100" alt="" />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2)"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                <p>
+                  <strong>{{ product.title }}</strong>
+                </p>
+                <!-- <p>Color: blue</p>
+                <p>Size: M</p> -->
+                <!-- Data -->
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                <p class="text-start text-md-center">
+                  <strong>
+                    <strong>{{
+                      product.price | currency: "INR"
+                    }}</strong></strong
+                  >
+                </p>
+
+                <button
+                  type="button"
+                  class="btn btn-primary btn-sm me-1 mb-2 ms-4"
+                  data-mdb-toggle="tooltip"
+                  title="Remove item"
+                  (click)="removeFromWishList(idx)"
+                >
+                  <i class="fa fa-remove"></i>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-danger btn-sm mb-2"
+                  data-mdb-toggle="tooltip"
+                  title="Move to the wish list"
+                  (click)="addToCart(product, idx)"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+              <hr class="my-4" />
+            </div>
+          </div>
+        </div>
+        <!-- Wish list UI modification end here  -->
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,192 @@
+<div class="container-fluid" style="padding-top: 100px">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="card-body">
+          <h5>Cart Summery</h5>
+          <h5 style="float: right">My Cart ({{ cartProducts.length }})</h5>
+          <div class="total-cart-items">
+            <h5 class="text-danger">
+              Total : {{ totalPrice | currency: "INR" }}
+            </h5>
+            <hr />
+          </div>
+          <ng-container *ngIf="cartProducts.length != 0">
+            <div class="cart-details">
+              <div class="card-table mt-4">
+                <div class="card-product">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>Quatity</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let product of cartProducts; index as idx">
+                        <td>
+                          <img
+                            src="{{ product.image }}"
+                            alt=""
+                            style="width: 150px; height: 150px"
+                          />
+                        </td>
+                        <td>{{ product.title }}</td>
+                        <td>1</td>
+                        <td>
+                          <strong>{{ product.price | currency: "INR" }}</strong>
+                        </td>
+                        <td>
+                          <button class="btn btn-danger" (click)="removeFromCart(idx)">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow-lg p-3 mb-5 bg-white rounded fixed-height">
+        <div class="card-body">
+          <div class="card check">
+            <h5 class="card-header">Order Summary</h5>
+            <div class="card-body">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xl-10">
+                    <p>Subtotal</p>
+                  </div>
+                  <div class="col-xl-2">
+                    <p class="float-end">
+                      <strong> {{ totalPrice | currency: "INR" }}</strong>
+                    </p>
+                  </div>
+                  <hr />
+                </div>
+                <div class="row">
+                  <div class="col-xl-10">
+                    <p>You Saved</p>
+                  </div>
+                  <div class="col-xl-2">
+                    <p class="float-end">
+                      <strong>{{ discountValue | currency: "INR" }}</strong>
+                    </p>
+                  </div>
+                  <hr />
+                </div>
+                <div class="row">
+                  <div class="col-xl-10">
+                    <p>Apply Coupon</p>
+                  </div>
+                  <div class="col-xl-2">
+                    <p class="float-end">
+                      <span
+                        *ngIf="!isCouponApplied"
+                        style="margin-left: 13rem"
+                        class="dropdown"
+                      >
+                        <button
+                          type="button"
+                          class="btn btn btn-outline dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Coupons
+                        </button>
+                        <ul
+                          class="dropdown-menu mt-0"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li>
+                            <a class="dropdown-item" (click)="applyCoupon(10)"
+                              >EAR00010</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" (click)="applyCoupon(20)"
+                              >NEC00020</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" (click)="applyCoupon(15)"
+                              >RIN00015</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" (click)="applyCoupon(25)"
+                              >BRC00025</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" (click)="applyCoupon(20)"
+                              >BRCRIN20</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" (click)="applyCoupon(25)"
+                              >NECRIN25</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" (click)="applyCoupon(20)"
+                              >EARNEC20</a
+                            >
+                          </li>
+                        </ul>
+                        <span *ngIf="isCouponApplied"> *Coupon Applied </span>
+                      </span>
+                    </p>
+                  </div>
+                  <hr />
+                  <div class="row">
+                    <div class="col-xl-10">
+                      <p>Delivery Charge(Standard)</p>
+                    </div>
+                    <div class="col-xl-2">
+                      <p class="float-end">Free</p>
+                    </div>
+                  </div>
+                  <hr style="border: 2px solid black" />
+                </div>
+                <div class="row text-black">
+                  <div class="col-xl-12">
+                    <p class="float-end fw-bold" *ngIf="isCouponApplied">
+                      Total: {{ netPrice | currency: "INR" }}
+                    </p>
+
+                    <p class="float-end fw-bold" *ngIf="!isCouponApplied">
+                      Total: {{ totalPrice | currency: "INR" }}
+                    </p>
+                  </div>
+                  <hr style="border: 2px solid black" />
+                </div>
+
+                <div class="d-flex justify-content-center btn-checkout mt-4">
+                  <button
+                    data-bs-dismiss="offcanvas"
+                    routerLink="/"
+                    class="btn btn-primary btn-lg"
+                  >
+                    Proceed to Pay
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

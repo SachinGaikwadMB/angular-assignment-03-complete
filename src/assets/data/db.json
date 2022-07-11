@@ -1,0 +1,144 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Shirin E Earrings in 925 Silver",
+      "price": 1890,
+      "description": "Silver Floral Stud Earrings. Crafted in 925 Oxidised Silver with Fresh Water Pearls. Uniquely handcrafted, no two pieces are exactly alike!",
+      "category": "earring",
+      "image": "https://images.cltstatic.com/media/product/350/AE00014-SS0000-shirin-e-earrings-in--silver-prd-1-model.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Being My Own Navratna Galaxy Earrings in 925 Silver",
+      "price": 1870,
+      "description": "Silver Long Earrings studded with CZ, Freshwater Pearl, Synthetic Sapphires, Ruby, Emerald, Red coral, Garnet and Cat's eye. Crafted in 925 Silver with a Dull Oxidised Finish. Uniquely handcrafted, no two pieces are exactly alike! A Shaya take on Navratnas. With minimal detailing, our Navratnas have been designed to go with everything. The key highlight is the random placement of stones on thin woven wires mimicking planets in an orbit.",
+      "category": "earring",
+      "image": "https://images.cltstatic.com/media/product/350/AE00827-SS0000-being-my-own-navratna-galaxy-earrings-in--silver-prd-1-model.jpg"
+    },
+
+    {
+      "id": 3,
+      "title": "Candida Earrings in 925 Silver",
+      "price": 2375,
+      "description": "Silver Dangler Earrings studded with Rosecut Glass Polkis. Crafted in 925 Silver with an Oxidised Finish. Uniquely handcrafted, no two pieces are exactly alike! This collection is a celebration of Jyoti - our most loyal customer. These structured and modern designs with a touch of intricate details embody her personality and style. Since Jyoti grew up loving and went on teaching English Literature, each design is named after her favourite leading women in books and plays.",
+      "category": "earring",
+      "image": "https://images.cltstatic.com/media/product/350/AE00682-SS0000-candida-earrings-in--silver-prd-1-model.jpg"
+    },
+
+    {
+      "id": 4,
+      "title": "Anna F Earrings in 925 Silver",
+      "price": 2000,
+      "description": "Silver Floral Dangler Earrings. Crafted in 925 Oxidised Silver with Fresh Water Pearls. Uniquely handcrafted, no two pieces are exactly alike!",
+      "category": "earring",
+      "image": "https://images.cltstatic.com/media/product/350/AE00855-SS0000-life-comes-full-circle-earrings-in--silver-prd-1-model.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Owning My Perfectionist Tendencies Necklace in 925 Silver",
+      "price": 2970,
+      "description": "Silver Enamelled Pendant Necklace with Green Quartz Accents. Crafted in 925 Silver with a Shiny Oxidised Finish. Uniquely handcrafted, no two pieces are exactly alike! 'Own Your Plumes' is a celebration of your unique style and expression. We've borrowed the flared forms and iridescent tones directly from the Peacock's one-of-a-kind plumage and its uninhibited movement.",
+      "category": "necklace",
+      "image": "https://images.cltstatic.com/media/product/350/AL00181-SS0000-owning-my-perfectionist-tendencies-necklace-in--silver-prd-1-model.jpg"
+    },
+    
+    {
+      "id": 6,
+      "title": "The Soulmate Circle Charm Necklace in 925 Silver",
+      "price": 1226,
+      "description": "Silver Mini Organic Circle Charm Pendant Necklace. Crafted in Gold Plated 925 Silver. The circle signifying endless love is a great way to celebrate your childhood friend who is also a soulmate. Here's something that you should know before buying this design, Gold Plated Jewellery will tarnish over a period of time, and quicker especially in humid places such as Mumbai and Chennai. For a longer lasting plating, the first step is to store your jewellery in a zip lock bag when you're not wearing it. Also, avoid direct contact with chemicals such as perfumes, sanitisers and the likes.",
+      "category": "necklace",
+      "image": "https://images.cltstatic.com/media/product/350/AL00227-SS0000-the-soulmate-circle-charm-necklace-in--silver-prd-1-model.jpg"
+    },
+    
+    {
+      "id": 7,
+      "title": "Good Vibes Necklace in Gold Plated 925 Silver",
+      "price": 1700,
+      "description": "Minimalistic Silver Pendant Necklace with Textured Weaves. Crafted in 925 Silver with 14Kt Gold Plating. Here's something that you should know before buying this design, Gold Plated Jewellery will tarnish over a period of time, and quicker especially in humid places such as Mumbai and Chennai. For a longer lasting plating, the first step is to store your jewellery in a zip lock bag when you're not wearing it. Also, avoid direct contact with chemicals such as perfumes, sanitisers and the likes.",
+      "category": "necklace",
+      "image": "https://images.cltstatic.com/media/product/350/AL00187-SS0000-good-vibes-necklace-in-gold-plated--silver-prd-1-model.jpg"
+    },
+
+    {
+      "id": 8,
+      "title": "Becky H Necklace in 925 Silver",
+      "price": 9800,
+      "description": "Silver Floral Collar Necklace. Crafted in 925 Oxidised Silver with Fresh Water Pearls. Uniquely handcrafted, no two pieces are exactly alike!",
+      "category": "necklace",
+      "image": "https://images.cltstatic.com/media/product/350/AL00177-SS0000-becky-h-necklace-in--silver-prd-1-model.jpg"
+    },
+    {
+      "id": 9,
+      "title": "All Nighter Ring in 925 Silver",
+      "price": 2400,
+      "description": "Silver Gemstone Tribal Statement Ring. Crafted in Oxidised 925 Silver. Uniquely handcrafted, no two pieces are exactly alike!",
+      "category": "rings",
+      "image": "https://images.cltstatic.com/media/product/350/AR00077-SS0000-all-nighter-ring-in--silver-prd-1-model.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Antique Srasta Step Ring in 925 Silver",
+      "price": 4600,
+      "description": "Silver Enameled Statement Ring. Crafted in 925 Oxidised Silver. Uniquely handcrafted, no two pieces are exactly alike!",
+      "category": "rings",
+      "image": "https://images.cltstatic.com/media/product/350/AR00061-SS0000-antique-srasta-step-ring-in--silver-prd-1-model.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Frida K Ring in 925 Silver",
+      "price": 5800,
+      "description": "Silver Floral Statement Ring. Crafted in 925 Oxidised Silver with Fresh Water Pearls. Uniquely handcrafted, no two pieces are exactly alike!",
+      "category": "rings",
+      "image": "https://images.cltstatic.com/media/product/350/AR00001-SS0000-frida-k-ring-in--silver-prd-1-model.jpg"
+    },
+
+    {
+      "id": 12,
+      "title": "See You Again Medium Ring (4 mm) in 925 Silver",
+      "price": 1188,
+      "description": "Minimalistic Silver Front Open Ring, studded with AAA quality Cubic Zircons (CZ). Crafted in 925 Silver with a High Polish Finish. Uniquely handcrafted, no two pieces are exactly alike!",
+      "category": "rings",
+      "image": "https://images.cltstatic.com/media/product/350/AR00298-SS0000-see-you-again-medium-ring--mm-in--silver-prd-1-model.jpg"
+    },
+    
+    {
+      "id": 13,
+      "title": "A Windy Walk Bracelet in 925 Silver",
+      "price": 4100,
+      "description": "Silver Structured Bracelet with Synthetic Opal Accents. Crafted in 925 Silver with a Shiny Oxidised Finish. Uniquely handcrafted, no two pieces are exactly alike! 'The Joy of Being' captures the essence of unadulterated happiness in just 'being' through Bubbles. They remind us of happy childhood memories, and the effervescent feeling of pure joy.",
+      "category": "bracelet",
+      "image": "https://images.cltstatic.com/media/product/350/AT00156-SS0000-a-windy-walk-bracelet-in--silver-prd-1-model.jpg"
+    },
+
+    {
+      "id": 14,
+      "title": "Bliss Bracelet in Gold Plated 925 Silver",
+      "price": 3510,
+      "description": "Silver Chain Bracelet. Crafted in Gold Plated 925 Silver with Natural Chrysoprase, Green Chalcedony, Labradorite and Green Onyx Stones. Uniquely handcrafted, no two pieces are exactly alike! Here's something that you should know before buying this design, Gold Plated Jewellery will tarnish over a period of time, and quicker especially in humid places such as Mumbai and Chennai. For a longer lasting plating, the first step is to store your jewellery in a zip lock bag when you're not wearing it. Also, avoid direct contact with chemicals such as perfumes, sanitisers and the likes.",
+      "category": "bracelet",
+      "image": "https://images.cltstatic.com/media/product/350/AT00097-SS0000-bliss-bracelet-in-gold-plated--silver-prd-1-model.jpg"
+    },
+
+    {
+      "id": 15,
+      "title": "Twinkling Stars Bracelet in Gold Plated 925 Silver",
+      "price": 2090,
+      "description": "Minimalistic Silver Flexi Bracelet, studded with Cubic Zircons (CZ). Crafted in Gold Plated 925 Silver with a High Polish Finish. Uniquely handcrafted, no two pieces are exactly alike! Here's something that you should know before buying this design, Gold Plated Jewellery will tarnish over a period of time, and quicker especially in humid places such as Mumbai and Chennai. For a longer lasting plating, the first step is to store your jewellery in a zip lock bag when you're not wearing it. Also, avoid direct contact with chemicals such as perfumes, sanitisers and the likes.",
+      "category": "bracelet",
+      "image": "https://images.cltstatic.com/media/product/350/AT00269-SS0000-twinkling-stars-bracelet-in-gold-plated--silver-prd-1-model.jpg"
+    },
+
+    {
+      "id": 16,
+      "title": "Owning My Intense OTTness Bracelet in 925 Silver",
+      "price": 5600,
+      "description": "Silver Enamelled Hinge Bracelet. Crafted in 925 Silver with a Shiny Oxidised Finish. Uniquely handcrafted, no two pieces are exactly alike! 'Own Your Plumes' is a celebration of your unique style and expression. We've borrowed the flared forms and iridescent tones directly from the Peacock's one-of-a-kind plumage and its uninhibited movement.",
+      "category": "bracelet",
+      "image": "https://images.cltstatic.com/media/product/350/AT00165-SS0000-owning-my-intense-ottness-bracelet-in--silver-prd-1-model.jpg"
+    }
+
+    
+  ]
+}

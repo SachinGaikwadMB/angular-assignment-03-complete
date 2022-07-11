@@ -1,0 +1,90 @@
+<div class="container-fluid" style="padding-top: 100px">
+  <div class="row">
+    <div class="col-sm-6 col-lg-3">
+      <ng-container *ngFor="let product of productsData">
+        <div class="card col-lg" *ngIf="product.category === 'earring'">
+          <button style="border: none;" routerLink="details/{{product.id}}"> <img src="{{ product.image }}" alt="" /> </button>
+          <small
+            ><strong>{{ product.title }}</strong></small
+          >
+          <div class="favorite-icon">
+            <small
+              ><strong>{{ product.price | currency: "INR" }}</strong></small
+            >
+            <button (click)="addToWishList(product)">
+              <i class="far fa-heart" style="font-size: 20px"></i>
+            </button>
+            <button (click)="addToCart(product)">
+              <i class='fas fa-shopping-cart' style='font-size:20px'></i>
+            </button>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <ng-container *ngFor="let product of productsData">
+        <div class="card col-lg" *ngIf="product.category === 'necklace'">
+          <button style="border: none;" routerLink="details/{{product.id}}"> <img src="{{ product.image }}" alt="" /> </button>
+          <small
+            ><strong>{{ product.title }}</strong></small
+          >
+          <div class="favorite-icon">
+            <small
+              ><strong>{{ product.price | currency: "INR" }}</strong></small
+            >
+            <button (click)="addToWishList(product)">
+              <i class="far fa-heart" style="font-size: 20px"></i>
+            </button>
+            <button (click)="addToCart(product)">
+              <i class='fas fa-shopping-cart' style='font-size:20px'></i>
+            </button>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <ng-container *ngFor="let product of productsData">
+        <div class="card col-lg" *ngIf="product.category === 'rings'">
+          <button style="border: none;" routerLink="details/{{product.id}}"> <img src="{{ product.image }}" alt="" /> </button>
+          <small
+            ><strong>{{ product.title }}</strong></small
+          >
+          <div class="favorite-icon">
+            <small
+              ><strong>{{ product.price | currency: "INR" }}</strong></small
+            >
+            <button (click)="addToWishList(product)">
+              <i class="far fa-heart" style="font-size: 20px"></i>
+            </button>
+            <button (click)="addToCart(product)">
+              <i class='fas fa-shopping-cart' style='font-size:20px'></i>
+            </button>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <ng-container *ngFor="let product of productsData">
+        <div class="card col-lg" *ngIf="product.category === 'bracelet'">
+          <!-- onclick redirect to details page -->
+          <button style="border: none;" routerLink="details/{{product.id}}"> <img src="{{ product.image }}" alt="" /> </button>
+          <small 
+            ><strong>{{ product.title }}</strong></small
+          >
+          <div class="favorite-icon">
+            <small
+              ><strong>{{ product.price | currency: "INR" }}</strong></small
+            >
+            <button (click)="addToWishList(product)" >
+              <i class="far fa-heart" style="font-size: 20px"></i>
+            </button>
+
+            <button (click)="addToCart(product)">
+              <i class='fas fa-shopping-cart' style='font-size:20px'></i>
+            </button>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
